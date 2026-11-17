@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The 1€ Experiment — a transparent, voluntary social experiment.">
+<title>The 1€ Experiment</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1523;--panel:#17263b;--line:#31445f;--text:#f5f7fb;--muted:#b8c5d8;--mint:#8ee3c2;--gold:#f5d78e}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#243b58 0,var(--bg) 58%);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;padding:24px}
+main{max-width:850px;margin:30px auto;background:#142238ee;border:1px solid var(--line);border-radius:26px;padding:clamp(22px,5vw,48px);box-shadow:0 24px 90px #0006}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.tag{display:inline-block;background:var(--mint);color:#10231d;padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:850;letter-spacing:.09em}
+.lang button{background:transparent;border:1px solid var(--line);color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer}.lang button.active{background:var(--mint);color:#10231d;border-color:var(--mint);font-weight:800}
+h1{font-size:clamp(2.8rem,9vw,5.6rem);line-height:.92;letter-spacing:-.065em;margin:28px 0 18px}h1 span{color:var(--mint)}
+h2{margin:30px 0 8px;font-size:1.35rem}p{color:var(--muted);margin:10px 0 16px}.lead{font-size:1.15rem;max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:26px 0}
+.card{background:#0f1b2c;border:1px solid var(--line);border-radius:18px;padding:20px}
+.big{font-size:2.3rem;font-weight:850;color:var(--mint);letter-spacing:-.04em}
+.small{font-size:.9rem;color:var(--muted)}
+.notice{border-left:4px solid var(--gold);background:#2b291f;padding:14px 16px;border-radius:10px;color:#f4e8c9;margin:22px 0}
+.steps{padding-left:22px;color:var(--muted)}.steps li{padding:5px 0}
+.details{background:#0f1b2c;border:1px dashed #667995;border-radius:16px;padding:18px;margin-top:14px}
+.label{color:var(--muted);font-size:.82rem;text-transform:uppercase;letter-spacing:.07em}
+.placeholder{font-family:ui-monospace,monospace;color:var(--gold);overflow-wrap:anywhere}
+footer{border-top:1px solid var(--line);margin-top:32px;padding-top:18px;color:var(--muted);font-size:.88rem}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <span class="tag" id="tag">A VOLUNTARY SOCIAL EXPERIMENT</span>
+    <div class="lang" aria-label="Choose language">
+      <button type="button" id="enBtn" class="active" onclick="setLang('en')">English</button>
+      <button type="button" id="deBtn" onclick="setLang('de')">Deutsch</button>
+    </div>
+  </div>
+
+  <section id="en">
+    <h1>THE <span>1€</span><br>EXPERIMENT</h1>
+    <p class="lead">What can a community do when people voluntarily choose to contribute a single euro? This small social experiment explores how many people are willing to take part in a simple, transparent idea.</p>
+    <div class="grid">
+      <div class="card"><div class="label">The idea</div><div class="big">€1</div><p class="small">A suggested contribution, not a requirement. Taking part is entirely optional.</p></div>
+      <div class="card"><div class="label">Amount collected</div><div class="big">Not yet tracked</div><p class="small">No verified contributions are being reported on this demo page.</p></div>
+    </div>
+    <h2>How the experiment works</h2>
+    <ol class="steps"><li>Read what the project is about.</li><li>Decide freely whether you want to participate.</li><li>If a verified payment method is introduced later, review the recipient and purpose before sending anything.</li><li>Project updates will explain how any received funds are counted and used.</li></ol>
+    <h2>Bank transfer information</h2>
+    <p>Bank transfers are <strong>not enabled yet</strong>. The details below are placeholders and must be completed and checked by the account holder before this page is published as a live collection page.</p>
+    <div class="details"><div class="label">Legal account holder / recipient</div><div class="placeholder">[Enter the account holder's real name]</div><br><div class="label">IBAN</div><div class="placeholder">[Add IBAN privately before publishing]</div><br><div class="label">BIC / SWIFT (if required)</div><div class="placeholder">[Add BIC if the bank requires it]</div><br><div class="label">Suggested transfer reference</div><div class="placeholder">1 EURO EXPERIMENT</div></div>
+    <div class="notice"><strong>Transparency and safety:</strong> The recipient name must match the bank account holder's details. Do not publish someone else's bank details. Before accepting money, make sure the account holder and a trusted parent/guardian have reviewed the plan and the applicable bank/payment rules. Never send money if you are unsure who receives it.</div>
+    <h2>Contact and updates</h2><p>Updates about the experiment should be posted here honestly. Do not claim a total or number of participants unless it has been checked.</p>
+  </section>
+
+  <section id="de" hidden>
+    <h1>DAS <span>1€</span><br>EXPERIMENT</h1>
+    <p class="lead">Was kann eine Gemeinschaft erreichen, wenn Menschen freiwillig jeweils einen Euro beitragen? Dieses kleine soziale Experiment untersucht, wie viele Menschen bei einer einfachen und transparenten Idee mitmachen möchten.</p>
+    <div class="grid">
+      <div class="card"><div class="label">Die Idee</div><div class="big">1 €</div><p class="small">Ein freiwilliger Richtwert, keine Pflicht. Die Teilnahme ist völlig freiwillig.</p></div>
+      <div class="card"><div class="label">Gesammelter Betrag</div><div class="big">Noch nicht erfasst</div><p class="small">Auf dieser Demoseite werden keine bestätigten Spenden angegeben.</p></div>
+    </div>
+    <h2>So funktioniert das Experiment</h2>
+    <ol class="steps"><li>Lies, worum es bei dem Projekt geht.</li><li>Entscheide selbst, ob du teilnehmen möchtest.</li><li>Falls später eine geprüfte Zahlungsmethode eingerichtet wird, prüfe vor einer Zahlung den Empfänger und den Zweck.</li><li>Projekt-Updates erklären transparent, wie eingegangene Beträge gezählt und verwendet werden.</li></ol>
+    <h2>Informationen zur Banküberweisung</h2>
+    <p>Banküberweisungen sind <strong>noch nicht aktiviert</strong>. Die folgenden Angaben sind Platzhalter und müssen vor einer Veröffentlichung als echte Spendenseite vom Kontoinhaber ergänzt und geprüft werden.</p>
+    <div class="details"><div class="label">Kontoinhaber / Empfänger laut Bank</div><div class="placeholder">[Den echten Namen des Kontoinhabers eintragen]</div><br><div class="label">IBAN</div><div class="placeholder">[IBAN vor der Veröffentlichung privat ergänzen]</div><br><div class="label">BIC / SWIFT (falls erforderlich)</div><div class="placeholder">[BIC ergänzen, falls von der Bank verlangt]</div><br><div class="label">Verwendungszweck</div><div class="placeholder">1 EURO EXPERIMENT</div></div>
+    <div class="notice"><strong>Transparenz und Sicherheit:</strong> Der Empfängername muss mit dem Namen des Kontoinhabers übereinstimmen. Veröffentliche keine Bankdaten anderer Personen. Vor dem Annehmen von Geld sollten der Kontoinhaber und eine vertrauenswürdige erwachsene Person den Plan sowie die geltenden Bank- und Zahlungsregeln prüfen. Überweise kein Geld, wenn unklar ist, wer es erhält.</div>
+    <h2>Kontakt und Neuigkeiten</h2><p>Veröffentliche hier nur überprüfte Informationen. Nenne keine Spendensumme und keine Teilnehmerzahl, die nicht tatsächlich kontrolliert wurde.</p>
+  </section>
+
+  <footer id="footer">Demo page · Bank transfers are not active · No payment is processed by this website.</footer>
+</main>
+<script>
+function setLang(lang){
+  const en=lang==='en';
+  document.getElementById('en').hidden=!en;
+  document.getElementById('de').hidden=en;
+  document.getElementById('enBtn').classList.toggle('active',en);
+  document.getElementById('deBtn').classList.toggle('active',!en);
+  document.getElementById('tag').textContent=en?'A VOLUNTARY SOCIAL EXPERIMENT':'EIN FREIWILLIGES SOZIALES EXPERIMENT';
+  document.getElementById('footer').textContent=en?'Demo page · Bank transfers are not active · No payment is processed by this website.':'Demoseite · Banküberweisungen sind nicht aktiviert · Diese Website verarbeitet keine Zahlungen.';
+  document.documentElement.lang=lang;
+}
+</script>
+</body>
+</html>
